@@ -25,6 +25,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # <<< plink2
 
-export PATH="$PATH:~/disk/genetics/tools/plink2/plink2"
+export PATH="$PATH:/disk/genetics/tools/plink2"
 
 # <<<
