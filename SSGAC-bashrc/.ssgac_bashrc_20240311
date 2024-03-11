@@ -1,0 +1,137 @@
+# SSGAC .bashrc file
+
+##############################################################################################
+# Functions
+#########
+
+# Usage: "is_not_in_pathtypevar $1 $2"
+# where 1 = directory and 2 = path type var (e.g. $PATH)
+is_not_in_pathtypevar() {
+  if [[ ":$2:" != *":$1:"* ]]; then
+    true
+  else
+    false
+  fi
+}
+
+# Usage: "is_not_at_front_of_pathtypevar $1 $2"
+# where 1 = directory and 2 = path type var (e.g. $PATH)
+is_not_at_front_of_pathtypevar() {
+  if [[ "$2" != "$1:"* ]]; then
+    true
+  else
+    false
+  fi
+}
+
+##############################################################################################
+
+
+##############################################################################################
+# Exported values
+#########
+
+# To cancel any of these in your own setup, add "unset [var_to_remove]" to your .bashrc
+# after the point at which you source this file
+
+export GEN_ROOT="/var/genetics"
+
+export TOOLS_HOME="${GEN_ROOT}/tools"
+export CODE_HOME="${GEN_ROOT}/code"
+export PROJ_HOME="${GEN_ROOT}/proj"
+export WS_HOME="${GEN_ROOT}/ws"
+export DATA_HOME="${GEN_ROOT}/data"
+
+# This is for running vcftools (rather than needing wrapper scripts for all of
+# the perl functionality)
+export PERL5LIB=/var/genetics/tools/vcftools/vcftools-vcftools-581c231/src/perl
+
+##############################################################################################
+
+
+##############################################################################################
+# Aliases
+#########
+
+# To cancel an alias in your own setup, add "unalias [alias_to_remove]" to your .bashrc
+# after the point at which you source this file
+
+alias cdgen='cd $GEN_ROOT'
+alias cdtools='cd $TOOLS_HOME'
+alias cdcode='cd $CODE_HOME'
+alias cdproj='cd $PROJ_HOME'
+alias cdws='cd $WS_HOME'
+alias cdmyws='cd $WS_HOME/$USER'
+alias cddata='cd $DATA_HOME'
+alias cdhome='cd ~'
+
+alias up1='cd ..'
+alias up2='cd ../..'
+alias up3='cd ../../..'
+alias up4='cd ../../../..'
+alias up5='cd ../../../../..'
+
+##############################################################################################
+
+
+
+##############################################################################################
+# PATH manipulation
+#########
+
+# If current directory is not first in PATH, add it to the front
+if is_not_at_front_of_pathtypevar "." $PATH; then
+  PATH=.:${PATH}
+fi
+
+# Make sure the tools bin area is on the PATH (at the end is ok)
+if is_not_in_pathtypevar "${TOOLS_HOME}/bin" "${PATH}"; then
+  PATH=${PATH}:${TOOLS_HOME}/bin
+fi
+
+# Make sure the code bin area is on the PATH (at the end is ok)
+if is_not_in_pathtypevar "${CODE_HOME}/bin" "${PATH}"; then
+  PATH=${PATH}:${CODE_HOME}/bin
+fi
+
+##############################################################################################
+
+
+
+##############################################################################################
+# MANPATH manipulation
+#########
+
+# Make sure samtools is on MANPATH (at the end is ok)
+if is_not_in_pathtypevar "${TOOLS_HOME}/samtools/share/man" "${MANPATH}"; then
+  MANPATH=${MANPATH}:${TOOLS_HOME}/samtools/share/man
+fi
+
+##############################################################################################
+
+
+##############################################################################################
+# Prompt manipulation
+#########
+
+# To further adjust your prompt, set the value of PS1 after sourcing this file
+# (to revert to the original prompt, simply set PS1=$DEFAULT_PROMPT)
+
+# Feel free to look up prompt options yourself, but in a pinch, this website may help:
+# https://linuxconfig.org/bash-prompt-basics
+
+DEFAULT_PROMPT=$PS1
+PS1="\\npwd: [\\w]\\n\\h \\W> "
+
+##############################################################################################
+
+
+
+##############################################################################################
+# Umask settings
+#########
+
+# Allow user and group full access, but no access to others
+umask 007
+
+##############################################################################################
