@@ -14,8 +14,8 @@
 #       I also automate update .zshrc using the DropBox and Maestral app on the server and a saved snippet on the terminus
 #
 #   
-#   I use $HOME/bulk for installing softwares, python versions, venvs and these kind of manged by pkg manager and not clean stuff
-#   I use my personal genetics folder defined below as $MAHDI_DIR for having the DropBox folder, all the code in git format in the Dropbox/0-all/0-git-all and anyother output if I wanted them to get synced I use the DropBox folder
+#   I use $HOME/bulk for installing softwares, python versions, venvs and these kind of manged by pkg manager and not clean stuff but automatically managed stuff
+#   I use my personal genetics folder defined below as $MAHDI_DIR for having the DropBox folder, all the code in git format in the and anyother output if I wanted them to get synced I use the DropBox folder
 #   
 #   I installed the pyenv in the .pyenv in the bulk folder so installing new python versions and pyenvs don't use my 10GB home folder space
 #       no need to sudo to install pyenv just git clone the repo
@@ -23,30 +23,47 @@
 #       To create venvs the pyenv-virtualenv which is plugin to pyenv must be setup
 #   
 #   DropBox
-#       I install Maestral app using simply pip in an isolated and exclusive Maestral app on the server, it has its deamon and ignoring and selective sync functionality
-#       Its demaons gets run upon login to server and sync everything with my DropBox account
+#       I install Maestral app using just pip in an isolated and exclusive Maestral app on the server, it has its deamon and ignoring and selective sync functionality
+#       Maestral Deamon runs upon login to server and sync everything with my DropBox account
 #       I have different setups to determine what should be synced between which computers
 #
 # <<<
 
 
 export BULK="$HOME/bulk"
-export MAHDI="/var/genetics/ws/mahdimir"
-export DROPBOX="$MAHDI/DropBox"
-export ALL="$DROPBOX/0-all"
-export GIT="$ALL/0-git-all"
+export MAHDI_GEN="/var/genetics/ws/mahdimir"
+export DBX="$MAHDI_GEN/DropBox"
+export EV="$DBX/B-ev"
+export GIT_CODE="$EV/A1-git-code"
 
+
+# >>> update shell rc files
+
+# update .tcshrc
+cp "$GIT/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
 
 # self update
 cp "$GIT/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
 
+# <<<
+
+
+# >>> aliases
+
+alias cdd='cd $DROPBOX'
+alias cd            'cd \!*;echo $PWD'
+
+
+# <<<
+
 
 # >>> SSGAC .bashrc
+
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
 
-source /var/genetics/misc/config/.ssgac_bashrc  # source runs in the current shell unlike the bash which creates a subshell
+source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current shell unlike the bash which creates a subshell
 
-# to revert to original prompt of zsh
+# revert to original prompt of zsh
 PS1=$DEFAULT_PROMPT
 
 # <<<
@@ -64,12 +81,5 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 # >>> pyenv-virtualenv
 
 eval "$(pyenv virtualenv-init -)"
-
-# <<<
-
-
-# >>> plink2
-
-export PATH="$PATH:/disk/genetics/tools/plink2"
 
 # <<<
