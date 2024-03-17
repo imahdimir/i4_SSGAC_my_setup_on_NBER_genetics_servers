@@ -40,17 +40,17 @@ export GIT_CODE="$EV/A1-git-code"
 # >>> update shell rc files
 
 # update .tcshrc
-cp "$GIT/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
+cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
 
 # self update
-cp "$GIT/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
+cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
 
 # <<<
 
 
 # >>> aliases
 
-alias cdd='cd $DROPBOX'
+alias cdd='cd $DBX'
 alias cd            'cd \!*;echo $PWD'
 
 
