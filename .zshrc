@@ -31,8 +31,8 @@
 
 
 export BULK="$HOME/bulk"
-export MAHDI_GEN="/var/genetics/ws/mahdimir"
-export DBX="$MAHDI_GEN/DropBox"
+export MAHDI="/var/genetics/ws/mahdimir"
+export DBX="$MAHDI/DropBox"
 export EV="$DBX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
@@ -50,7 +50,7 @@ export GIT_CODE="$EV/A1-git-code"
 
 # >>> aliases
 
-# alias cdd='cd $DBX'
+alias cdd           'cd $DBX'
 alias cd            'cd \!*;echo $PWD'
 
 
