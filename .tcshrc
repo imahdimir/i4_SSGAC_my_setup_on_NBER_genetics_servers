@@ -137,8 +137,8 @@ cd ~/zshrc-SSGAC
 git reset --hard HEAD
 git pull
 
-cp ./.tcshrc ~/.tcshrc
-cp ./.zshrc ~/.zshrc
+cp -f ./.tcshrc ~/.tcshrc 
+cp -f ./.zshrc ~/.zshrc -y 
 
 cd
 # <<<
