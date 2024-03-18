@@ -31,15 +31,15 @@
 
 
 export BULK="$HOME/bulk"
-# export MAHDI="/var/genetics/ws/mahdimir"
-export DBX="$MAHDI/DropBox"
-export EV="$DBX/B-ev"
+export MAHDI="/var/genetics/ws/mahdimir"
+export DROPBOX="$MAHDI/DropBox"
+export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
 
 # >>> aliases
 
-alias cdd           'cd $DBX'
+alias cdd           'cd $DROPBOX'
 alias cd            'cd \!*;echo $PWD'
 
 
