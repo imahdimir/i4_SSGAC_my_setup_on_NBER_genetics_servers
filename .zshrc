@@ -37,7 +37,7 @@ PS1=$DEFAULT_PROMPT
 
 # >>> exports
 export BULK="$HOME/bulk"
-export MAHDI="/var/genetics/ws/mahdimir"
+export MAHDI="$WS_HOME/mahdimir"
 export DROPBOX="$MAHDI/DropBox"
 export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
