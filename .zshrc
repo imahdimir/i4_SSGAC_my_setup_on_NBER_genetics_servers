@@ -40,10 +40,10 @@ export GIT_CODE="$EV/A1-git-code"
 # >>> update shell rc files
 
 # update .tcshrc
-cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
+# cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
 
 # self update
-cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
+# cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
 
 # <<<
 
