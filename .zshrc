@@ -50,7 +50,7 @@ export GIT_CODE="$EV/A1-git-code"
 
 # >>> aliases
 
-alias cdd='cd $DBX'
+# alias cdd='cd $DBX'
 alias cd            'cd \!*;echo $PWD'
 
 
