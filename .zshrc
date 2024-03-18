@@ -31,7 +31,7 @@
 
 
 export BULK="$HOME/bulk"
-export MAHDI="/var/genetics/ws/mahdimir"
+# export MAHDI="/var/genetics/ws/mahdimir"
 export DBX="$MAHDI/DropBox"
 export EV="$DBX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
