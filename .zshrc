@@ -36,7 +36,7 @@ export GIT_CODE="$EV/A1-git-code"
 
 # >>> aliases
 alias cdd="cd $DROPBOX"
-# alias cd="cd $@;echo $PWD" # it doesn't work as exp
+alias cd="cd \!*;echo $PWD" # it doesn't work as exp
 
 # >>> SSGAC .bashrc
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
