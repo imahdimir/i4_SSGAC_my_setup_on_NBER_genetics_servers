@@ -132,7 +132,7 @@ set ignoreeof
 # rest added by Mahdi
 
 # >>> update tcshrc and zshrc files
-cd zshrc-SSGAC
+cd ~/zshrc-SSGAC
 
 git reset --hard HEAD
 git pull
