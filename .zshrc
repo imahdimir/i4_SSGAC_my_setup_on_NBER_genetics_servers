@@ -28,47 +28,26 @@
 #       I have different setups to determine what should be synced between which computers
 #
 # <<<
-
-
 export BULK="$HOME/bulk"
 export MAHDI="/var/genetics/ws/mahdimir"
 export DROPBOX="$MAHDI/DropBox"
 export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
-
 # >>> aliases
-
 alias cdd           'cd $DROPBOX'
 alias cd            'cd \!*;echo $PWD'
 
-
-# <<<
-
-
 # >>> SSGAC .bashrc
-
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
-
 source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current shell unlike the bash which creates a subshell
-
 # revert to original prompt of zsh
 PS1=$DEFAULT_PROMPT
 
-# <<<
-
-
 # >>> pyenv
-
 export PYENV_ROOT="$BULK/.pyenv"
 export PATH="$PATH:$PYENV_ROOT/bin"
 eval "$(pyenv init -)" # using eval to hide ouputs 
 
-# <<< 
-
-
 # >>> pyenv-virtualenv
-
 eval "$(pyenv virtualenv-init -)"
-
-# <<<

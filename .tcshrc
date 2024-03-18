@@ -129,6 +129,7 @@ set ignoreeof
 #source /home/lib/NBER.cshrc
 #/bin/test -r /homes/site/etc/NBER.cshrc && source /homes/site/etc/NBER.cshrc
 
+# >>>>>>
 # rest added by Mahdi
 
 # >>> update tcshrc and zshrc files
@@ -141,8 +142,6 @@ cp ./.tcshrc ~/.tcshrc
 cp ./.zshrc ~/.zshrc
 
 cd
-# <<<
-
 
 # >>> switch to zsh
 zsh -i
