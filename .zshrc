@@ -44,7 +44,7 @@ export GIT_CODE="$EV/A1-git-code"
 
 # >>> f()
 mycd() {
-  if [ "$1" == "-" ]; then
+  if [[ "$1" == "-" ]]; then
     cd "$@"
   else
     cd "$@" && pwd
