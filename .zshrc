@@ -35,7 +35,7 @@ export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
 # >>> aliases
-alias cdd           'cd $DROPBOX'
+alias cdd=cd $DROPBOX
 # alias cd="cd \!*;echo $cwd"
 
 # >>> SSGAC .bashrc
