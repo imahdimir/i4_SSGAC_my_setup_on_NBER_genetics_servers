@@ -36,7 +36,7 @@ set noclobber
 #         aliases for all shells
 
 alias cd            'cd \!*;echo $cwd'
-# alias cp            'cp -i'
+alias cp            'cp -i'
 alias mv            'mv -i'
 alias rm            'rm -i'
 alias pwd           'echo $cwd'
@@ -128,23 +128,3 @@ set ignoreeof
 #alias mkae          make
 #source /home/lib/NBER.cshrc
 #/bin/test -r /homes/site/etc/NBER.cshrc && source /homes/site/etc/NBER.cshrc
-
-# rest added by Mahdi
-
-# >>> update tcshrc and zshrc files
-cd ~/zshrc-SSGAC
-
-git reset --hard HEAD
-git pull
-
-cp ./.tcshrc ~/.tcshrc
-cp ./.zshrc ~/.zshrc
-
-cd
-# <<<
-
-
-# >>> switch to zsh
-zsh -i
-echo "Switching to zsh shell"
-# <<<
