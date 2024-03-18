@@ -37,17 +37,6 @@ export EV="$DBX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
 
-# >>> update shell rc files
-
-# update .tcshrc
-# cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.tcshrc" ~/.tcshrc
-
-# self update
-# cp "$GIT_CODE/zshrc-on-genetics-servers-SSGAC/.zshrc" ~/.zshrc
-
-# <<<
-
-
 # >>> aliases
 
 alias cdd           'cd $DBX'
