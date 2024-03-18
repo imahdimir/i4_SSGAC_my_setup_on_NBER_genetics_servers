@@ -43,7 +43,7 @@ export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
 # >>> f()
-function mycd() {
+mycd() {
   if [ "$1" == "-" ]; then
     cd "$@"
   else
