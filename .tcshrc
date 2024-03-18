@@ -131,11 +131,18 @@ set ignoreeof
 
 # rest added by Mahdi
 
+# >>> update tcshrc and zshrc files
 cd zshrc-SSGAC
-git fetch --all
+
+git reset --hard HEAD
+git pull
+
+cp ./.tcshrc ~/.tcshrc
+cp ./.zshrc ~/.zshrc
+# <<<
 
 
-
-
+# >>> switch to zsh
 zsh -i
 echo "Switching to zsh shell"
+# <<<
