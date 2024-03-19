@@ -39,6 +39,7 @@ PS1=$DEFAULT_PROMPT
 export BULK="$HOME/bulk"
 export MAHDI="$WS_HOME/mahdimir"
 export DROPBOX="$MAHDI/DropBox"
+export LOCAL="$MAHDI/LOCAL"
 export EV="$DROPBOX/B-ev"
 export GIT_CODE="$EV/A1-git-code"
 
