@@ -54,7 +54,7 @@ mycd() {
 
 # >>> aliases
 alias cdd="cd $DROPBOX"
-# alias cd=mycd
+alias cd=mycd
 
 # >>> pyenv
 export PYENV_ROOT="$BULK/.pyenv"
