@@ -28,6 +28,7 @@
 #       I have different setups to determine what should be synced between which computers
 #   
 #   Completions
+#       TODO: make maestral completion work
 #       I made the ~/.zsh/completion dir for storing completion.
 #       I added the completion code for the maestral to the dir.
 #
@@ -70,6 +71,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # >>> completions
 # to load completion files from the path
-fpath=(~/.zsh/completion $fpath)
-autoload -U compinit
-compinit
+# fpath=(~/.zsh/completion $fpath)
+# autoload -U compinit
+# compinit
