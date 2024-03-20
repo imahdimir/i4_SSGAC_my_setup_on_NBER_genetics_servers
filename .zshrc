@@ -26,6 +26,10 @@
 #       I install Maestral app using just pip in an isolated and exclusive Maestral app on the server, it has its deamon and ignoring and selective sync functionality
 #       Maestral Deamon runs upon login to server and sync everything with my DropBox account
 #       I have different setups to determine what should be synced between which computers
+#   
+#   Completions
+#       I made the ~/.zsh/completion dir for storing completion.
+#       I added the completion code for the maestral to the dir.
 #
 # <<<
 
@@ -63,3 +67,9 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 
 # >>> pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
+
+# >>> completions
+# to load completion files from the path
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit
+compinit
