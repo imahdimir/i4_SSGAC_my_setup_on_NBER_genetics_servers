@@ -1,6 +1,4 @@
-# rest added by Mahdi
-
-# >>> setup
+# >>> 
 #
 #   The default shell of the genetics server is tcsh which is not good enough
 #       tcsh runs .tcshrc on login
