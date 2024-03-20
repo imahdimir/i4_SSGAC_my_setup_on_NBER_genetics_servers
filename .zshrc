@@ -24,15 +24,21 @@
 #   
 #   DropBox
 #       I install Maestral app using just pip in an isolated and exclusive Maestral app on the server, it has its deamon and ignoring and selective sync functionality
-#       Maestral Deamon runs upon login to server and sync everything with my DropBox account
 #       I have different setups to determine what should be synced between which computers
+#       
+#       Deamon
+#           I disabled the deamon autostart upon startup.
+#           Instead I created a tmux session on the g03 machine which is the dev machine. Inside that session I manually started the deamon.
+#             the tmux session I created is window 0
+#             I will never kill this session as I want to my files keep getting synced anytime even when I am not logged into servers.
 #   
+#
 #   Completions
 #       TODO: make maestral completion work
 #       I made the ~/.zsh/completion dir for storing completion.
 #       I added the completion code for the maestral to the dir.
 #
-# <<<
+
 
 # >>> SSGAC .bashrc
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
