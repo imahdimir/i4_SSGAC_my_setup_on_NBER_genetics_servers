@@ -45,7 +45,7 @@ source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current s
 PS1=$DEFAULT_PROMPT
 
 # >>> exports
-source "~/.export"
+source ".export"
 
 # >>> f()
 mycd() {
