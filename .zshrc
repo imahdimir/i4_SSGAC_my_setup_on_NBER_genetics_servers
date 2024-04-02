@@ -38,16 +38,16 @@
 #
 
 
-# >>> SSGAC .bashrc
+# > SSGAC .bashrc
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
 source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current shell unlike the bash which creates a subshell
 # revert to original prompt of zsh
 PS1=$DEFAULT_PROMPT
 
-# >>> exports
+# > exports
 source ".export"
 
-# >>> f()
+# > f()
 mycd() {
   if [[ "$1" == "-" ]]; then
     cd "$@"
@@ -56,19 +56,24 @@ mycd() {
   fi
 }
 
-# >>> aliases
+# > aliases
 alias cdd="cd $DROPBOX"
 alias cd=mycd
 
-# >>> pyenv
+# > pyenv
 export PYENV_ROOT="$BULK/.pyenv"
 export PATH="$PATH:$PYENV_ROOT/bin"
 eval "$(pyenv init -)" # using eval to hide ouputs 
 
-# >>> pyenv-virtualenv
+# > pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
 
-# >>> completions
+# > DrBx status - 2 check if ev thing is OK
+pyenv activate Maestral
+maestral status
+pyenv deactivate
+
+# > completions
 # to load completion files from the path
 # fpath=(~/.zsh/completion $fpath)
 # autoload -U compinit
