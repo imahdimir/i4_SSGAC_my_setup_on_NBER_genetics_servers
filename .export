@@ -1,0 +1,6 @@
+export BULK="$HOME/bulk"
+export ME="$WS_HOME/mahdimir"
+export DB="$ME/db" # DropBox
+export LC="$ME/lc" # Local files, not on DropBox
+export EV="$DB/B-EV"
+export C="$EV/A1-GIT-CODE"

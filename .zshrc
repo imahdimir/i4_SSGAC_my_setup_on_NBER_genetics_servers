@@ -45,12 +45,7 @@ source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current s
 PS1=$DEFAULT_PROMPT
 
 # >>> exports
-export BULK="$HOME/bulk"
-export MAHDI="$WS_HOME/mahdimir"
-export DROPBOX="$MAHDI/DropBox"
-export LOCAL="$MAHDI/LOCAL"
-export EV="$DROPBOX/B-ev"
-export GIT_CODE="$EV/A1-git-code"
+source "~/.export"
 
 # >>> f()
 mycd() {
