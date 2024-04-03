@@ -1,5 +1,4 @@
-export BULK="$HOME/bulk"
-export ME="$WS_HOME/mahdimir"
+export ME="/var/genetics/ws/mahdimir"
 export DB="$ME/db"
 export LC="$ME/lc"
 export EV="$DB/B-EV"

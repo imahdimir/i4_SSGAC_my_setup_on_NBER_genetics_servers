@@ -45,6 +45,7 @@ source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current s
 PS1=$DEFAULT_PROMPT
 
 # > exports
+export BULK="$HOME/bulk"
 source ".export"
 
 # > f()
@@ -57,7 +58,7 @@ mycd() {
 }
 
 # > aliases
-alias cdd="cd $DROPBOX"
+alias cdd="cd $DB"
 alias cd=mycd
 
 # > pyenv
