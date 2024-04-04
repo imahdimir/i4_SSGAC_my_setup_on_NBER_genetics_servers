@@ -4,4 +4,4 @@ export LC="$ME/lc"
 export EV="$DB/B-EV"
 export C="$EV/A1-GIT-CODE"
 export PG="$DB/C1-P-G"
-export PG_SF="$PG/A1-Git-SF"s
+export PG_SF="$PG/A1-Git-SF"
