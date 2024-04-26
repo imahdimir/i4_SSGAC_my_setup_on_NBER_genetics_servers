@@ -1,7 +1,14 @@
-export ME="/var/genetics/ws/mahdimir"
-export DB="$ME/db"
-export LC="$ME/lc"
+export MHD="/var/genetics/ws/mahdimir"
+export UKB="/disk/genetics/ukb"
+
+export DB="$MHD/DB"
 export EV="$DB/B_EV"
 export C="$EV/A1_GIT_CODE"
 export PG="$DB/C1_P_G"
 export CF="$PG/A1_Git_CF"
+
+export LC="$MHD/LC"
+export PRJ_F_T="$LC/PRJ_FILES_TEMP"
+
+export MHD_UKB="$UKB/mahdimir"
+export PRJ_F_A="$MHD_UKB/PRJ_FILES_ARCH"
