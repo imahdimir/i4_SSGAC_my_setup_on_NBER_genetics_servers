@@ -41,14 +41,12 @@
 # > SSGAC .bashrc
 #   it consists of useful ENV Vars like GEN_ROOT & other aliases
 source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current shell unlike the bash which creates a subshell
+
 # revert to original prompt of zsh
 PS1=$DEFAULT_PROMPT
 
-# > exports
 export BULK="$HOME/bulk"
-source ".export"
 
-# > f()
 mycd() {
   if [[ "$1" == "-" ]]; then
     cd "$@"
@@ -57,9 +55,11 @@ mycd() {
   fi
 }
 
-# > aliases
-alias cdd="cd $DB"
 alias cd=mycd
+
+
+source ".export"
+
 
 # > pyenv
 export PYENV_ROOT="$BULK/.pyenv"

@@ -1,14 +1,18 @@
-export MHD="/var/genetics/ws/mahdimir"
-export UKB="/disk/genetics/ukb"
+# export UKB="/disk/genetics/ukb"
+# export MHD_UKB="$UKB/mahdimir"
 
-export DB="$MHD/DB"
-export EV="$DB/B_EV"
-export C="$EV/A1_GIT_CODE"
-export PG="$DB/C1_P_G"
-export CF="$PG/A1_Git_CF"
+export WS_MHD="/var/genetics/ws/mahdimir"
 
-export LC="$MHD/LC"
-export PRJ_F_T="$LC/PRJ_FILES_TEMP"
+export DBX="$WS_MHD/DBX"
+alias cdd="mycd $DBX"
 
-export MHD_UKB="$UKB/mahdimir"
-export PRJ_F_A="$MHD_UKB/PRJ_FILES_ARCH"
+# export EV="$DB/B_EV"
+# export C="$EV/A1_GIT_CODE"
+# export PG="$DB/C1_P_G"
+# export CF="$PG/A1_Git_CF"
+
+export LOCAL="$WS_MHD/LOCAL"
+alias cdl="mycd $LOCAL"
+
+export PRJ_LOCAL="$LOCAL/PRJ"
+alias cdp="mycd $PRJ_LOCAL"
