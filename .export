@@ -1,7 +1,8 @@
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"
 
-export WS_MHD="/var/genetics/ws/mahdimir"
+export WS="/var/genetics/ws/mahdimir"
+alias cdw="mycd $WS"
 
 export DBX="$WS_MHD/DBX"
 alias cdd="mycd $DBX"
