@@ -4,7 +4,7 @@
 export WS="/var/genetics/ws/mahdimir"
 alias cdw="mycd $WS"
 
-export DBX="$WS_MHD/DBX"
+export DBX="$WS/DBX"
 alias cdd="mycd $DBX"
 
 # export EV="$DB/B_EV"
@@ -12,7 +12,7 @@ alias cdd="mycd $DBX"
 # export PG="$DB/C1_P_G"
 # export CF="$PG/A1_Git_CF"
 
-export LOCAL="$WS_MHD/LOCAL"
+export LOCAL="$WS/LOCAL"
 alias cdl="mycd $LOCAL"
 
 export PRJ_LOCAL="$LOCAL/PRJ"
