@@ -24,14 +24,20 @@
 #       TODO: make maestral completion work
 #       I made the ~/.zsh/completion dir for storing completion.
 #       I added the completion code for the maestral to the dir.
+# > completions
+# to load completion files from the path
+# fpath=(~/.zsh/completion $fpath)
+# autoload -U compinit
+# compinit
 #
 
 
-# > SSGAC .bashrc
-#   it consists of useful ENV Vars like GEN_ROOT & other aliases
-source "/var/genetics/misc/config/.ssgac_bashrc"  # source runs in the current shell unlike the bash which creates a subshell
 
-# revert to original zsh prompt
+# SSGAC .bashrc: has useful ENV Vars like GEN_ROOT
+# source runs in the current shell unlike the bash command which creates a subshell
+source "/var/genetics/misc/config/.ssgac_bashrc"
+
+# revert back to original zsh prompt
 PS1=$DEFAULT_PROMPT
 
 
@@ -58,12 +64,7 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)"
 
 # Maestral DropBox status check
-pyenv activate Maestral
+pyenv activate maestral_venv
+pip install --upgrade pip maestral
 maestral status
 pyenv deactivate
-
-# > completions
-# to load completion files from the path
-# fpath=(~/.zsh/completion $fpath)
-# autoload -U compinit
-# compinit
