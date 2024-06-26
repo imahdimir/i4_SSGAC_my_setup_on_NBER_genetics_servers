@@ -3,17 +3,17 @@ export BULK="$HOME/bulk"
 export WS="/var/genetics/ws/mahdimir"
 alias cdw="mycd $WS"
 
-export DBX="$WS/DBX"
+export DBX="$WS/dbx"
 alias cdx="mycd $DBX"
 
-export CODE="$DBX/B_EV/A1_GIT_CODE"
+export CODE="$DBX/b_ev/a1_git_code"
 alias cdc="mycd $CODE"
 
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"
 
-export LOCAL="$WS/LOCAL"
+export LOCAL="$WS/local"
 alias cdl="mycd $LOCAL"
 
-export PRJ_LOCAL="$LOCAL/PRJ"
-alias cdp="mycd $PRJ_LOCAL"
+export PRJ_DATA_LOCAL="$LOCAL/prj_data"
+alias cdp="mycd $PRJ_DATA_LOCAL"
