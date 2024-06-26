@@ -65,6 +65,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # Maestral DropBox status check
 pyenv activate maestral_venv
-pip install --upgrade pip maestral
+echo "Updating pip & maestral in maestral_venv"
+pip install --upgrade pip maestral -q
 maestral status
 pyenv deactivate
