@@ -1,3 +1,5 @@
+export BULK="$HOME/bulk"
+
 export WS="/var/genetics/ws/mahdimir"
 alias cdw="mycd $WS"
 
