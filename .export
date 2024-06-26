@@ -1,16 +1,14 @@
-# export UKB="/disk/genetics/ukb"
-# export MHD_UKB="$UKB/mahdimir"
-
 export WS="/var/genetics/ws/mahdimir"
 alias cdw="mycd $WS"
 
 export DBX="$WS/DBX"
-alias cdd="mycd $DBX"
+alias cdx="mycd $DBX"
 
-# export EV="$DB/B_EV"
-# export C="$EV/A1_GIT_CODE"
-# export PG="$DB/C1_P_G"
-# export CF="$PG/A1_Git_CF"
+export CODE="$DBX/B_EV/A1_GIT_CODE"
+alias cdc="mycd $CODE"
+
+# export UKB="/disk/genetics/ukb"
+# export MHD_UKB="$UKB/mahdimir"
 
 export LOCAL="$WS/LOCAL"
 alias cdl="mycd $LOCAL"
