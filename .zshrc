@@ -72,7 +72,7 @@ update_ev_thing(){
 
 
 DEFAULT_PROMPT=$PS1
-PS1=""
+PS1=">"
 
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
