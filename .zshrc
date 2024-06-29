@@ -19,7 +19,7 @@
 
 
 # revert back to original zsh prompt
-PS1=$DEFAULT_PROMPT
+# PS1=$DEFAULT_PROMPT
 
 
 mycd() {
@@ -31,6 +31,7 @@ mycd() {
 }
 
 alias cd=mycd
+
 
 get_maestral_status(){
   pyenv activate maestral_venv
