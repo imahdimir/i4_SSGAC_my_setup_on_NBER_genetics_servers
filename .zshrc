@@ -62,7 +62,7 @@ update_shell_config() {
   cp ./.zshrc ~/.zshrc
   cp ./.export ~/.export
 
-  cd
+  exec $SHELL
 }
 
 update_ev_thing(){
@@ -78,3 +78,6 @@ PS1=">"
 eval "$(pyenv init -)" # using eval to hide ouputs 
 # pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
+
+
+get_maestral_status
