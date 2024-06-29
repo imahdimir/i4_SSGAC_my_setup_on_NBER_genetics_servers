@@ -18,8 +18,8 @@
 '
 
 
-# revert back to original zsh prompt
-# PS1=$DEFAULT_PROMPT
+# Back to original zsh prompt
+PS1=$DEFAULT_PROMPT
 
 
 mycd() {
