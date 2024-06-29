@@ -6,7 +6,9 @@ Shell Configuration
 
 DropBox Setup
 - Installed Maestral in "maestral_venv" for syncing with selective functionality.
-- Enabled Maestral autostart for its daemon.
+- Disabled Maestral autostart for its daemon.
+- Created a tmux session named "a" to keep maestral deamon running all the time.
+- 
 - Use different setups to determine sync between computers.
 
 Management
@@ -29,22 +31,27 @@ alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL"
 
 
-mycd() {
+mycd()
+{
   if [[ "$1" == "-" ]]; then
     cd "$@"
   else
     cd "$@" && pwd
   fi
 }
+
 alias cd=mycd
 
-get_maestral_status(){
+
+get_maestral_status() 
+{
   pyenv activate maestral_venv
   maestral status
   pyenv deactivate
 }
 
-update_maestral(){
+update_maestral() 
+{
   pyenv activate maestral_venv
   echo "Updating pip & maestral in maestral_venv"
   pip install --upgrade pip maestral -q
@@ -52,7 +59,8 @@ update_maestral(){
   pyenv deactivate
 }
 
-update_shell_config() {
+update_shell_config()
+{
   cd ~/G_zshrc
 
   git reset --hard HEAD
@@ -65,7 +73,8 @@ update_shell_config() {
   exec $SHELL
 }
 
-update_ev_thing(){
+update_ev_thing()
+{
   update_shell_config
   update_maestral
 }
