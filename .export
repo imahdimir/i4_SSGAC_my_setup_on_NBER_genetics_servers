@@ -1,19 +1,14 @@
 export BULK="$HOME/bulk"
 
+# pyenv
+export PYENV_ROOT="$BULK/.pyenv"
+export PATH="$PATH:$PYENV_ROOT/bin"
+
 export WS="/var/genetics/ws/mahdimir"
-alias cdw="mycd $WS"
-
 export DBX="$WS/dbx"
-alias cdx="mycd $DBX"
-
 export CODE="$DBX/b_ev/a1_git_code"
-alias cdc="mycd $CODE"
+export LOCAL="$WS/local"
+export PRJ_DATA_LOCAL="$LOCAL/prj_data"
 
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"
-
-export LOCAL="$WS/local"
-alias cdl="mycd $LOCAL"
-
-export PRJ_DATA_LOCAL="$LOCAL/prj_data"
-alias cdp="mycd $PRJ_DATA_LOCAL"

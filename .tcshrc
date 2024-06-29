@@ -130,22 +130,5 @@ set ignoreeof
 #/bin/test -r /homes/site/etc/NBER.cshrc && source /homes/site/etc/NBER.cshrc
 
 
-
-# > rest added by me (Mahdi)
-
-
-# self update(.tcshrc) and zshrc files from GitHub base
-cd ~/G_zshrc
-
-git reset --hard HEAD
-git pull
-
-cp ./.tcshrc ~/.tcshrc
-cp ./.zshrc ~/.zshrc
-cp ./.export ~/.export
-
-cd
-
-
-# >> Switch Shell to zsh (then .zshrc will be run automatically upon switch)
+# Switch Shell to zsh
 zsh -i
