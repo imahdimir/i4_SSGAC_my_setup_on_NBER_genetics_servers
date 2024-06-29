@@ -18,6 +18,10 @@
 '
 
 
+# revert back to original zsh prompt
+PS1=$DEFAULT_PROMPT
+
+
 mycd() {
   if [[ "$1" == "-" ]]; then
     cd "$@"
@@ -28,13 +32,11 @@ mycd() {
 
 alias cd=mycd
 
-
 get_maestral_status(){
   pyenv activate maestral_venv
   maestral status
   pyenv deactivate
 }
-
 
 update_maestral(){
   pyenv activate maestral_venv
@@ -43,7 +45,6 @@ update_maestral(){
   maestral status
   pyenv deactivate
 }
-
 
 update_shell_config() {
   cd ~/G_zshrc
@@ -58,7 +59,6 @@ update_shell_config() {
   cd
 }
 
-
 update_ev_thing(){
   update_shell_config
   update_maestral
@@ -70,10 +70,6 @@ alias cdx="mycd $DBX"
 alias cdc="mycd $CODE"
 alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL"
-
-
-# revert back to original zsh prompt
-PS1=$DEFAULT_PROMPT
 
 
 source "/var/genetics/misc/config/.ssgac_bashrc"
