@@ -21,6 +21,7 @@ Management
 source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
+
 alias cdw="mycd $WS"
 alias cdx="mycd $DBX"
 alias cdc="mycd $CODE"
@@ -68,6 +69,10 @@ update_ev_thing(){
   update_shell_config
   update_maestral
 }
+
+
+DEFAULT_PROMPT=$PS1
+PS1=""
 
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
