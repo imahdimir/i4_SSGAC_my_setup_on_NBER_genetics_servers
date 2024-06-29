@@ -1,21 +1,18 @@
-: ' Shell Configuration
-- Default shell on Genetic NBER servers: tcsh (runs .tcshrc on start).
-- Switch to zsh upon login (with .tcshrc) then zsh runs .zshrc automatically.
-'
+# Shell Configuration
+# - Default shell on Genetic NBER servers: tcsh (runs .tcshrc on start).
+# - Switch to zsh upon login (with .tcshrc) then zsh runs .zshrc automatically.
 
-: ' DropBox Setup
-- Installed Maestral in "maestral_venv" for syncing with selective functionality.
-- Enabled Maestral autostart for its daemon.
-- Use different setups to determine sync between computers.
-'
+# DropBox Setup
+# - Installed Maestral in "maestral_venv" for syncing with selective functionality.
+# - Enabled Maestral autostart for its daemon.
+# - Use different setups to determine sync between computers.
 
-: ' Management
-- Use BULK=$HOME/bulk for software installations, Python versions, venvs, and auto-managed items.
-- Installed pyenv in $HOME/bulk to save space in the 10GB home folder.
-- pyenv to install/manage python versions
-- pyenv virtualenv for manage python venvs
-- Personal Workspace ($WS) for DropBox + Local Data(Porjects Data + Non_Project Data).
-'
+# Management
+# - Use BULK=$HOME/bulk for software installations, Python versions, venvs, and auto-managed items.
+# - Installed pyenv in $HOME/bulk to save space in the 10GB home folder.
+# - pyenv to install/manage python versions
+# - pyenv virtualenv for manage python venvs
+# - Personal Workspace ($WS) for DropBox + Local Data(Porjects Data + Non_Project Data).
 
 
 # Back to original zsh prompt
