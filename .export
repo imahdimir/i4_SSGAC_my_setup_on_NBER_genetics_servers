@@ -6,7 +6,7 @@ export PATH="$PATH:$PYENV_ROOT/bin"
 
 export WS="/var/genetics/ws/mahdimir"
 export DBX="$WS/dbx"
-export CODE="$DBX/b_ev/a1_git_code"
+export CODE="$DBX/B_EV_WHERE/A1_CODE_GIT"
 export LOCAL="$WS/local"
 export PRJ_DATA_LOCAL="$LOCAL/prj_data"
 

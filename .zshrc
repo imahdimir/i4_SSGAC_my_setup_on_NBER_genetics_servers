@@ -8,7 +8,6 @@ DropBox Setup
 - Installed Maestral in "maestral_venv" for syncing with selective functionality.
 - Disabled Maestral autostart for its daemon.
 - Created a tmux session named "a" to keep maestral deamon running all the time.
-- 
 - Use different setups to determine sync between computers.
 
 Management
