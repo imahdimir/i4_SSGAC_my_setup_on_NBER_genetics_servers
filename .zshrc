@@ -88,6 +88,4 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)"
 
 
-update_shell_config
-
 get_maestral_status
