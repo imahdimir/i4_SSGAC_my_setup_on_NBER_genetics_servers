@@ -131,4 +131,4 @@ set ignoreeof
 
 
 # Switch Shell to zsh
-zsh -i
+# zsh -i
