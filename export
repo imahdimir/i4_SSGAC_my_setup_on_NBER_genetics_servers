@@ -10,7 +10,7 @@ export WS="/var/genetics/ws/mahdimir"
 export DBX="$WS/dbx"
 export CODE="$DBX/B_EV_WHERE/A2_GIT_CODE_Alex"
 export LOCAL="$WS/local"
-export PRJ_DATA_LOCAL="$LOCAL/prj_data"
+# export PRJ_DATA_LOCAL="$LOCAL/prj_data"
 
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"
