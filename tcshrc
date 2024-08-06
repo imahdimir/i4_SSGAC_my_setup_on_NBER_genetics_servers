@@ -139,22 +139,7 @@ set ignoreeof
 # - Installed pyenv in $HOME/bulk to save space in the 10GB home folder
 # - $WS for DropBox + Local Data (Porjects Data + Non_Project Data)
 
-https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/export
-https://raw.githubusercontent.com/imahdimir/mtok/blob/main/src/mtok/helpers.py
-
-https://raw.githubusercontent.com/imahdimir/mtok/main/src/mtok/helpers.py
-
-export PRJ_DATA_LOCAL="$LOCAL/prj_data"
-
-source "/var/genetics/misc/config/.ssgac_bashrc"
-source ".export"
-
-
-alias cdw="mycd $WS"
-alias cdx="mycd $DBX"
-alias cdc="mycd $CODE"
-alias cdl="mycd $LOCAL"
-alias cdp="mycd $PRJ_DATA_LOCAL"
+#############################################################################
 
 
 mycd()
@@ -166,8 +151,6 @@ mycd()
   fi
 }
 
-alias cd=mycd
-
 
 get_maestral_status() 
 {
@@ -175,6 +158,7 @@ get_maestral_status()
   maestral status
   pyenv deactivate
 }
+
 
 update_maestral() 
 {
@@ -185,25 +169,24 @@ update_maestral()
   pyenv deactivate
 }
 
-update_shell_config()
-{
-  cd ~/G_zshrc
 
-  git reset --hard HEAD
-  git pull
+alias cd=mycd
 
-  cp ./.tcshrc ~/.tcshrc
-  cp ./.zshrc ~/.zshrc
-  cp ./.export ~/.export
+alias cdw="mycd $WS"
+alias cdx="mycd $DBX"
+alias cdc="mycd $CODE"
+alias cdl="mycd $LOCAL"
+alias cdp="mycd $PRJ_DATA_LOCAL/24Q3"
 
-  exec $SHELL
-}
 
-update_ev_thing()
-{
-  update_shell_config
-  update_maestral
-}
+# update .export & tcshrc from GitHub base
+wget -O .export https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/export
+wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/tcshrc
+
+
+# source SSGAC bashrc & export variables
+source "/var/genetics/misc/config/.ssgac_bashrc"
+source ".export"
 
 
 DEFAULT_PROMPT=$PS1
