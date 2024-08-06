@@ -144,6 +144,8 @@ https://raw.githubusercontent.com/imahdimir/mtok/blob/main/src/mtok/helpers.py
 
 https://raw.githubusercontent.com/imahdimir/mtok/main/src/mtok/helpers.py
 
+export PRJ_DATA_LOCAL="$LOCAL/prj_data"
+
 source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
