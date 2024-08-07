@@ -10,7 +10,6 @@
 
 #############################################################################
 
-
 mycd()
 {
   if [[ "$1" == "-" ]]; then
@@ -20,14 +19,12 @@ mycd()
   fi
 }
 
-
 get_maestral_status() 
 {
   pyenv activate maestral_venv
   maestral status
   pyenv deactivate
 }
-
 
 update_maestral() 
 {
@@ -38,7 +35,30 @@ update_maestral()
   pyenv deactivate
 }
 
+restart_maestral() 
+{
+  pyenv activate maestral_venv
+  echo "Restarting Maestral"
+  maestral stop
+  meastral start
+  maestral status
+  pyenv deactivate
+}
 
+update_maestral_on_fri()
+{
+day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
+
+if [ "$day_of_week" -eq 5 ];
+then
+    echo "Updating maestral"
+    update_maestral
+else
+    echo "Today is not Friday, No update to maestral."
+fi
+}
+
+###################################
 
 alias cd=mycd
 
@@ -48,6 +68,7 @@ alias cdc="mycd $CODE"
 alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL/24Q3"
 
+###################################
 
 # update .export & tcshrc from GitHub base
 wget -O .export https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/export
@@ -69,4 +90,5 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)"
 
 
+update_maestral_on_fri
 get_maestral_status
