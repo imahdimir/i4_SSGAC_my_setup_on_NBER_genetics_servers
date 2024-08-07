@@ -35,6 +35,13 @@ update_maestral()
   pyenv deactivate
 }
 
+start_maestral()
+{
+  pyenv activate maestral_venv
+  maestral start
+  pyenv deactivate
+}
+
 restart_maestral() 
 {
   pyenv activate maestral_venv
