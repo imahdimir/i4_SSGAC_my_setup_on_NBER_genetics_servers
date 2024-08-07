@@ -40,7 +40,7 @@ restart_maestral()
   pyenv activate maestral_venv
   echo "Restarting Maestral"
   maestral stop
-  meastral start
+  maestral start
   maestral status
   pyenv deactivate
 }
