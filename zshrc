@@ -39,6 +39,7 @@ start_maestral()
 {
   pyenv activate maestral_venv
   maestral start
+  maestral status
   pyenv deactivate
 }
 
