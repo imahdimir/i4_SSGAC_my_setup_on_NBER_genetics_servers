@@ -74,7 +74,7 @@ alias cdw="mycd $WS"
 alias cdx="mycd $DBX"
 alias cdc="mycd $CODE"
 alias cdl="mycd $LOCAL"
-alias cdp="mycd $PRJ_DATA_LOCAL/24Q3"
+alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
 
 ###################################
 
