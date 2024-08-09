@@ -68,7 +68,7 @@ remind_updating_maestral_on_fri()
 # and multiple start on different hosts
 start_maestral_if_host_is_g03() 
 {
-  if [ "$(hostname)" == "g03" ];
+  if [[ "$(hostname)" == "g03" ]];
     then
         start_maestral
     else
