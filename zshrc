@@ -70,7 +70,8 @@ start_maestral_if_host_is_g03()
 # and multiple start on different hosts
 
 # Check the hostname
-if [ "$(hostname)" == "g03" ]; then
+if [ "$(hostname)" == "g03" ]; 
+then
     start_maestral
 else
     echo "Hostname is $(hostname), not 'g03'. start_maestral will not run."
