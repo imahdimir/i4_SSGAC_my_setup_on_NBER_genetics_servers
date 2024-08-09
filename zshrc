@@ -64,11 +64,10 @@ remind_updating_maestral_on_fri()
   fi
 }
 
-start_maestral_if_host_is_g03()
-  # I disabled maestral autostart to avoid error on start 
-  # and multiple start on different hosts
+# I disabled maestral autostart to avoid error on start 
+# and multiple start on different hosts
+start_maestral_if_host_is_g03() 
 {
-  # Check the hostname
   if [ "$(hostname)" == "g03" ];
   then
       start_maestral
