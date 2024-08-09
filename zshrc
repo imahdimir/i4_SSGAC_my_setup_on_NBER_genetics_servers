@@ -1,4 +1,4 @@
-#############################################################################
+###########################################################################
 
 # DropBox Setup: Installed Maestral in "maestral_venv" for syncing with 
 # selective functionality
@@ -8,7 +8,7 @@
 # - Installed pyenv in $HOME/bulk to save space in the 10GB home folder
 # - $WS for DropBox + Local Data (Porjects Data + Non_Project Data)
 
-#############################################################################
+###########################################################################
 
 
 mycd()
@@ -65,7 +65,7 @@ fi
 }
 
 
-###################################
+##################################################
 
 
 alias cd=mycd
@@ -77,7 +77,7 @@ alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
 
 
-###################################
+##################################################
 
 
 # source SSGAC bashrc & export variables
