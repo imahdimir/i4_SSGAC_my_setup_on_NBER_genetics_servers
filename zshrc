@@ -111,5 +111,3 @@ eval "$(pyenv virtualenv-init -)"
 
 remind_updating_maestral_on_fri
 start_maestral_if_host_is_g03
-
-
