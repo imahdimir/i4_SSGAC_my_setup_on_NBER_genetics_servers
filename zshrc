@@ -10,6 +10,7 @@
 
 #############################################################################
 
+
 mycd()
 {
   if [[ "$1" == "-" ]]; then
@@ -53,7 +54,7 @@ restart_maestral()
   pyenv deactivate
 }
 
-update_maestral_on_fri()
+remind_updating_maestral_on_fri()
 {
 day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
 
@@ -63,7 +64,9 @@ then
 fi
 }
 
+
 ###################################
+
 
 alias cd=mycd
 
@@ -73,12 +76,8 @@ alias cdc="mycd $CODE"
 alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
 
-###################################
 
-# update .export & tcshrc from GitHub base
-wget -O .export https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/export
-wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/tcshrc
-wget -O .zshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/zshrc
+###################################
 
 
 # source SSGAC bashrc & export variables
@@ -95,5 +94,5 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)"
 
 
-update_maestral_on_fri
+remind_updating_maestral_on_fri
 get_maestral_status
