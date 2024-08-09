@@ -56,27 +56,27 @@ restart_maestral()
 
 remind_updating_maestral_on_fri()
 {
-day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
+  day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
 
-if [ "$day_of_week" -eq 5 ];
-then
-    echo "Today is Friday, Update maestral by 'update_maestral()'"
-fi
+  if [ "$day_of_week" -eq 5 ];
+  then
+      echo "Today is Friday, Update maestral by update_maestral()"
+  fi
 }
 
 start_maestral_if_host_is_g03()
 {
-# I disabled maestral autostart to avoid error on start 
-# and multiple start on different hosts
+  # I disabled maestral autostart to avoid error on start 
+  # and multiple start on different hosts
 
-# Check the hostname
-if [ "$(hostname)" == "g03" ]; 
-then
-    start_maestral
-else
-    echo "Hostname is $(hostname), not 'g03'. start_maestral will not run."
-    get_maestral_status
-fi
+  # Check the hostname
+  if [ "$(hostname)" == "g03" ]; 
+  then
+      start_maestral
+  else
+      echo "Hostname is $(hostname), not 'g03'. start_maestral will not run."
+      get_maestral_status
+  fi
 }
 
 
