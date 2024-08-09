@@ -68,10 +68,31 @@ remind_updating_maestral_on_fri()
 # and multiple start on different hosts
 start_maestral_if_host_is_g03() 
 {
+
   if [[ "$(hostname)" == "g03" ]];
     then
+
         start_maestral
+      
+        while true; 
+        do
+          # Run the command and capture its output
+          output=$(get_maestral_status 2>&1)
+          
+          # Check if the error message is in the output
+          if echo "$output" | grep -q "Database transaction error"; then
+              restart_maestral
+              # Optionally, you can add a sleep command to avoid overwhelming the system
+              sleep 10  # Wait 10 seconds before checking again
+          else
+              echo "No error detected. Exiting the loop."
+              break  # Exit the loop if the error is no longer present
+          fi
+      
+        done
+
     else
+    
         echo "Hostname is $(hostname), not 'g03'. start_maestral will not run."
         get_maestral_status
   fi
