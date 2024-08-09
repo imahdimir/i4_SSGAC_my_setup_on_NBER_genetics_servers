@@ -60,7 +60,7 @@ day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
 
 if [ "$day_of_week" -eq 5 ];
 then
-    echo "Today is Friday, Update maestral by `update_maestral`"
+    echo "Today is Friday, Update maestral by 'update_maestral()'"
 fi
 }
 
