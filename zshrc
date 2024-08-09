@@ -66,38 +66,27 @@ remind_updating_maestral_on_fri()
 
 # I disabled maestral autostart to avoid error on start 
 # and multiple start on different hosts
-start_maestral_if_host_is_g03() 
+start_maestral_on_login() 
 {
+  restart_maestral  
 
-  if [[ "$(hostname)" == "g03" ]];
+  while true; 
+  do
+    # Run the command and capture its output
+    output=$(get_maestral_status 2>&1)
+
+    # Check if the error message is in the output
+    if echo "$output" | grep -q "Database transaction error"; 
     then
-
-        start_maestral
-      
-        while true; 
-        do
-          # Run the command and capture its output
-          output=$(get_maestral_status 2>&1)
-          
-          # Check if the error message is in the output
-          if echo "$output" | grep -q "Database transaction error"; 
-          then
-              restart_maestral
-              # Optionally, you can add a sleep command to avoid overwhelming the system
-              sleep 10  # Wait 10 seconds before checking again
-          else
-              echo "No error detected. Exiting the loop."
-              break  # Exit the loop if the error is no longer present
-          fi
-      
-        done
-
+        restart_maestral
+        # Optionally, you can add a sleep command to avoid overwhelming the system
+        sleep 10  # Wait 10 seconds before checking again
     else
-        echo "Hostname is $(hostname), not 'g03'. start_maestral will not run."
-        get_maestral_status
+        echo "No error detected. Exiting the loop."
+        break  # Exit the loop if the error is no longer present
+    fi
 
-  fi
-
+  done
 }
 
 
@@ -131,4 +120,4 @@ eval "$(pyenv virtualenv-init -)"
 
 
 remind_updating_maestral_on_fri
-start_maestral_if_host_is_g03
+start_maestral_on_login
