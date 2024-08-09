@@ -30,7 +30,7 @@ get_maestral_status()
 update_maestral() 
 {
   pyenv activate maestral_venv
-  echo "Updating pip & maestral in maestral_venv"
+  echo "INFO: Updating pip & maestral in maestral_venv"
   pip install --upgrade pip maestral -q
   maestral status
   pyenv deactivate
@@ -47,7 +47,7 @@ start_maestral()
 restart_maestral() 
 {
   pyenv activate maestral_venv
-  echo "Restarting Maestral"
+  echo "INFO: Restarting Maestral"
   maestral stop
   maestral start
   maestral status
@@ -60,7 +60,7 @@ remind_updating_maestral_on_fri()
 
   if [ "$day_of_week" -eq 5 ];
     then
-        echo "Today is Friday, reminder: Update maestral by 'update_maestral'."
+        echo "Reminder: Today is Friday, Update maestral by 'update_maestral'."
   fi
 }
 
@@ -82,7 +82,7 @@ start_maestral_on_login()
         # Optionally, you can add a sleep command to avoid overwhelming the system
         sleep 10  # Wait 10 seconds before checking again
     else
-        echo "No error detected. Exiting the loop."
+        echo "INFO: No error detected. Exiting the loop."
         break  # Exit the loop if the error is no longer present
     fi
 
