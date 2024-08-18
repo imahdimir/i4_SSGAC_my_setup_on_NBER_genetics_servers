@@ -64,11 +64,10 @@ start_maestral_on_login()
     output=$(get_maestral_status 2>&1)
 
     # Check if the error message is in the output
-    if echo "$output" | grep -q "Database transaction error"; 
-    then
+    if echo "$output" | grep -q "Database transaction error"; then
         restart_maestral
         sleep 1  # Wait 1 second before checking again, to avoid overwhelming the system
-    elif echo "$output" | grep -q "Maestral daemon is not running.";
+    elif echo "$output" | grep -q "Maestral daemon is not running."; then
         start_maestral
         sleep 1
     else
