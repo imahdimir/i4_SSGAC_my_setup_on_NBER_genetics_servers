@@ -10,7 +10,6 @@
 
 ###########################################################################
 
-
 mycd()
 {
   if [[ "$1" == "-" ]]; then
@@ -29,8 +28,8 @@ get_maestral_status()
 
 update_maestral() 
 {
-  pyenv activate maestral_venv
   echo "INFO: Updating pip & maestral in maestral_venv"
+  pyenv activate maestral_venv
   pip install --upgrade pip maestral -q
   maestral status
   pyenv deactivate
@@ -38,6 +37,7 @@ update_maestral()
 
 start_maestral()
 {
+  echo "INFO: Starting maestral from maestral_venv"
   pyenv activate maestral_venv
   maestral start
   maestral status
@@ -46,29 +46,19 @@ start_maestral()
 
 restart_maestral() 
 {
-  pyenv activate maestral_venv
   echo "INFO: Restarting Maestral"
+  pyenv activate maestral_venv
   maestral stop
   maestral start
   maestral status
   pyenv deactivate
 }
 
-remind_updating_maestral_on_fri()
-{
-  day_of_week=$(date +%u)  # 1=Monday, ..., 5=Friday, ..., 7=Sunday
-
-  if [ "$day_of_week" -eq 5 ];
-    then
-        echo "Reminder: Today is Friday, Update maestral by 'update_maestral'."
-  fi
-}
-
 # I disabled maestral autostart to avoid error on start 
 # and multiple start on different hosts
 start_maestral_on_login() 
 {
-  restart_maestral  
+  start_maestral  
 
   while true; 
   do
@@ -80,9 +70,9 @@ start_maestral_on_login()
     then
         restart_maestral
         # Optionally, you can add a sleep command to avoid overwhelming the system
-        sleep 10  # Wait 10 seconds before checking again
+        sleep 1  # Wait 1 second before checking again
     else
-        echo "INFO: No error detected. Exiting the loop."
+        echo "INFO: No error detected, Maestral is running, Exiting the loop."
         break  # Exit the loop if the error is no longer present
     fi
 
@@ -119,5 +109,4 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)"
 
 
-remind_updating_maestral_on_fri
 start_maestral_on_login
