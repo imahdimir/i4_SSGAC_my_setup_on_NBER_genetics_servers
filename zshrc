@@ -18,6 +18,8 @@ mycd()
     cd "$@" && pwd
   fi
 }
+alias cd=mycd
+
 
 get_maestral_status() 
 {
@@ -77,10 +79,14 @@ start_maestral_on_login()
 }
 
 
-##################################################
+start_maestral_on_login
 
 
-alias cd=mycd
+# source SSGAC bashrc & export variables
+source "/var/genetics/misc/config/.ssgac_bashrc"
+
+
+source ".export"
 
 alias cdw="mycd $WS"
 alias cdx="mycd $DBX"
@@ -89,24 +95,9 @@ alias cdl="mycd $LOCAL"
 alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
 
 
-##################################################
-
-
-# just to update tcshrc from another script not itself
-wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/tcshrc
-
-
-# source SSGAC bashrc & export variables
-source "/var/genetics/misc/config/.ssgac_bashrc"
-source ".export"
-
-
 DEFAULT_PROMPT=$PS1
 PS1='[%3d] $ '
 
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
 eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
-
-
-start_maestral_on_login
