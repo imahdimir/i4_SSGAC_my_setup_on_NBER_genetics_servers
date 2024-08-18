@@ -135,7 +135,6 @@ set ignoreeof
 
 # update .export, .tcshrc & .zshrc from GitHub base
 wget -O .export https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/export
-wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/tcshrc
 wget -O .zshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/zshrc
 
 

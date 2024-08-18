@@ -92,6 +92,10 @@ alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
 ##################################################
 
 
+# just to update tcshrc from another script not itself
+wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/NBER_Genetics_Servers_tcshrc/master/tcshrc
+
+
 # source SSGAC bashrc & export variables
 source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
@@ -102,8 +106,7 @@ PS1='[%3d] $ '
 
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
-# pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 
 start_maestral_on_login
