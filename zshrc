@@ -58,13 +58,11 @@ restart_maestral()
 # and multiple start on different hosts
 start_maestral_on_login() 
 {
-  start_maestral  
-
   while true; 
   do
     # Run the command and capture its output
     output=$(get_maestral_status 2>&1)
-
+    
     # Check if the error message is in the output
     if echo "$output" | grep -q "Database transaction error"; 
     then
@@ -75,7 +73,6 @@ start_maestral_on_login()
         echo "INFO: No error detected, Maestral is running, Exiting the loop."
         break  # Exit the loop if the error is no longer present
     fi
-
   done
 }
 
