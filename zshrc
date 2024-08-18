@@ -58,9 +58,8 @@ restart_maestral()
 # and multiple start on different hosts
 start_maestral_on_login() 
 {
-  while true; 
-  do
-    # Run the command and capture its output
+  while true; do
+    # Capture maestral status
     output=$(get_maestral_status 2>&1)
 
     # Check if the error message is in the output
