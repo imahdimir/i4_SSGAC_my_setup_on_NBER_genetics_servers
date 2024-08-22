@@ -6,7 +6,7 @@ export PYENV_ROOT="$BULK/.pyenv"
 export PATH="$PATH:$PYENV_ROOT/bin"
 
 export WS="/var/genetics/ws/mahdimir"
-export PROJ_DATA_LOCAL="$WS/PROJ_DATA_LOCAL"
+export PROJ_DATA="$WS/PROJ_DATA"
 
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"
