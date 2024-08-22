@@ -21,7 +21,6 @@ mycd()
 alias cd=mycd
 
 
-
 # source SSGAC bashrc & export variables
 source "/var/genetics/misc/config/.ssgac_bashrc"
 
