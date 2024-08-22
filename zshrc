@@ -28,10 +28,7 @@ source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
 alias cdw="mycd $WS"
-alias cdx="mycd $DBX"
-alias cdc="mycd $CODE"
-alias cdl="mycd $LOCAL"
-alias cdp="mycd $PRJ_DATA_LOCAL/24Q3/"
+alias cdp="mycd $PD/24Q3/"
 
 
 DEFAULT_PROMPT=$PS1
