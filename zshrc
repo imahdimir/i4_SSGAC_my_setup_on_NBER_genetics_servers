@@ -29,7 +29,7 @@ alias cdp="mycd $PD/24Q3/"
 alias cdt="mycd $T"
 
 function cpt() {
-    cp -v \"$1\" $T
+    cp -v $1 $T
 }
 
 DEFAULT_PROMPT=$PS1
