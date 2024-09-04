@@ -29,6 +29,7 @@ source ".export"
 
 alias cdw="mycd $WS"
 alias cdp="mycd $PD/24Q3/"
+alias cdt="mycd $TEMP"
 
 
 DEFAULT_PROMPT=$PS1
