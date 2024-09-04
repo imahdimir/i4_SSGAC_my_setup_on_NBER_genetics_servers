@@ -9,7 +9,7 @@ export WS="/var/genetics/ws/mahdimir"
 export PD="$WS/projects_data"
 
 # temp folder to quick access on sftp
-export TEMP="$HOME/temp/"
+export T="$HOME/temp/"
 
 # export UKB="/disk/genetics/ukb"
 # export MHD_UKB="$UKB/mahdimir"

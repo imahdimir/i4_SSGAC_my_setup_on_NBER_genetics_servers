@@ -20,21 +20,20 @@ mycd()
 }
 alias cd=mycd
 
-
 # source SSGAC bashrc & export variables
 source "/var/genetics/misc/config/.ssgac_bashrc"
-
-
 source ".export"
 
 alias cdw="mycd $WS"
 alias cdp="mycd $PD/24Q3/"
-alias cdt="mycd $TEMP"
+alias cdt="mycd $T"
 
+function cpt() {
+    cp -v \"$1\" $T
+}
 
 DEFAULT_PROMPT=$PS1
 PS1='[%3d] $ '
-
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
 eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
