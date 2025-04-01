@@ -1,4 +1,3 @@
-# bulk folder to keep python versions using pyenv
 export BULK="$HOME/bulk"
 
 # pyenv
@@ -6,10 +5,4 @@ export PYENV_ROOT="$BULK/.pyenv"
 export PATH="$PATH:$PYENV_ROOT/bin"
 
 export WS="/var/genetics/ws/mahdimir"
-export PD="$WS/projects_data"
-
-# temp folder to quick access on sftp
-export T="$HOME/temp_4_sftp_2_pc/"
-
-# export UKB="/disk/genetics/ukb"
-# export MHD_UKB="$UKB/mahdimir"
+export PROJECTS_DATA="$WS/projects_data"
