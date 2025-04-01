@@ -21,8 +21,8 @@ source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
 
-alias cdw="mycd $WS"
-alias cdp="mycd $PROJECTS_DATA"
+alias cdw="cd $WS"
+alias cdp="cd $PROJECTS_DATA"
 
 
 # change default zsh prompt
