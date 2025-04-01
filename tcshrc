@@ -135,7 +135,7 @@ set ignoreeof
 
 # update .export, .tcshrc & .zshrc from current/self Github repo
 
-set self_repo_name="250331_SSGAC_my_setup_on_NBER_genetics_servers"
+set self_repo_name=250331_SSGAC_my_setup_on_NBER_genetics_servers
 wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/$self_repo_name/master/tcshrc
 # For the first time or change in the above line just run two above line manually on the server one time, just one time for next times it will be automatic.
 
