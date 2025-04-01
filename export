@@ -7,6 +7,6 @@ export PATH="$PATH:$PYENV_ROOT/bin"
 export WS="/var/genetics/ws/mahdimir"
 export PROJECTS_DATA="$WS/projects_data"
 
-export UKB="/disk/genetics/data/ukb/"
+export UKB="/disk/genetics/data/ukb"
 export UKB_WS="$UKB/mahdimir"
 export UKB_PROJECTS_DATA="$UKB_WS/UKB_PROJECTS_DATA"
