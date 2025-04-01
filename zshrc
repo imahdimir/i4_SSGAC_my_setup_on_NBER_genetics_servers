@@ -24,6 +24,7 @@ source ".export"
 alias cdw="mycd $WS"
 alias cdp="mycd $PROJECTS_DATA"
 
+
 # back to default zsh prompt
 DEFAULT_PROMPT=$PS1
 PS1='[%3d] $ '
