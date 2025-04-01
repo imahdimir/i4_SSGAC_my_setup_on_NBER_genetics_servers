@@ -32,3 +32,7 @@ PS1='[%3d] $ '
 
 eval "$(pyenv init -)" # using eval to hide ouputs 
 eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
+
+
+# Just to see where I am
+cd
