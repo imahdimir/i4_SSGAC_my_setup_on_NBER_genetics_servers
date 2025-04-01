@@ -10,7 +10,7 @@ mycd()
   if [[ "$1" == "-" ]]; then
     cd "$@"
   else
-    cd "$@" && pwd
+    cd "$@" && pwd && ls
   fi
 }
 alias cd=mycd
