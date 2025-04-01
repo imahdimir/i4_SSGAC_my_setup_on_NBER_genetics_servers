@@ -21,8 +21,11 @@ source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
 
-alias cdw="cd $WS"
+alias cdws="cd $WS"
 alias cdp="cd $PROJECTS_DATA"
+
+alias cduws="cd $UKB_WS"
+alias cdup="cd $UKB_PROJECTS_DATA"
 
 
 # change default zsh prompt
