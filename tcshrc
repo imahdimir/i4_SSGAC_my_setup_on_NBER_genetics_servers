@@ -134,9 +134,10 @@ set ignoreeof
 
 
 # update .export, .tcshrc & .zshrc from current/self Github repo
-wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/250331_my_setup_on_NBER_genetics_servers/master/tcshrc
-wget -O .export https://raw.githubusercontent.com/imahdimir/250331_my_setup_on_NBER_genetics_servers/master/export
-wget -O .zshrc https://raw.githubusercontent.com/imahdimir/250331_my_setup_on_NBER_genetics_servers/master/zshrc
+self_repo_name=250331_SSGAC_my_setup_on_NBER_genetics_servers
+wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/$self_repo_name/master/tcshrc
+wget -O .export https://raw.githubusercontent.com/imahdimir/$self_repo_name/master/export
+wget -O .zshrc https://raw.githubusercontent.com/imahdimir/$self_repo_name/master/zshrc
 
 
 # switch to zsh, .zshrc will be run automatically
