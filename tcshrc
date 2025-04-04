@@ -140,7 +140,7 @@ alias echoblue 'echo "\033[34m\!* \033[0m"'
 
 set repo=i4_SSGAC_my_setup_on_NBER_genetics_servers
 
-echoblue "Updating [.tcshrc, .zshrc, .export] from https://github.com/imahdimir/$repo"
+echoblue "\n\nUpdating [.tcshrc, .zshrc, .export] from https://github.com/imahdimir/$repo\n\n"
 
 wget -O .tcshrc https://raw.githubusercontent.com/imahdimir/$repo/master/tcshrc
 # For the first time or change in the above line just run two above line manually on the server one time, just one time in the first time, next times it will be automatic.
