@@ -9,6 +9,3 @@ export PROJECTS_DATA="$WS/projects_data"
 
 export UKB_WS="/disk/genetics/ukb/mahdimir"
 export UKB_PROJECTS_DATA="$UKB_WS/UKB_PROJECTS_DATA"
-
-
-# 
