@@ -9,3 +9,8 @@ export PROJECTS_DATA="$WS/projects_data"
 
 export UKB_WS="/disk/genetics/ukb/mahdimir"
 export UKB_PROJECTS_DATA="$UKB_WS/UKB_PROJECTS_DATA"
+
+
+# rig
+export RIG_ROOT="$BULK/R_rig_renv/rig"
+export PATH="$PATH:$RIG_ROOT/bin"
