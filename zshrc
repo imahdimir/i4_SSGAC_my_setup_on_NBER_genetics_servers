@@ -37,6 +37,10 @@ eval "$(pyenv init -)" # using eval to hide ouputs
 eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 
+# Add PLINK to PATH
+export PATH="/homes/nber/alextisyoung/plink:$PATH"
+
+
 # Just to see where I am
 cd
 
@@ -57,5 +61,3 @@ cd
 # <<< conda initialize <<<
 
 
-# Add PLINK to PATH
-export PATH="/homes/nber/alextisyoung/plink:$PATH"
