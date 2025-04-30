@@ -38,7 +38,7 @@ eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 
 # Add PLINK to PATH
-export PATH="/homes/nber/alextisyoung/plink:$PATH"
+export PATH="$PATH:/homes/nber/alextisyoung/plink"
 
 
 # Just to see where I am
