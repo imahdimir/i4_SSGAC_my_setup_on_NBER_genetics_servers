@@ -56,3 +56,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Add PLINK to PATH
+export PATH="/homes/nber/alextisyoung/plink:$PATH"
