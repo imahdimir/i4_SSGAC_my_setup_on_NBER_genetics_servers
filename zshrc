@@ -39,6 +39,8 @@ eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 # Add PLINK to PATH
 #export PATH="/homes/nber/alextisyoung/plink:$PATH"
+# Wasn't successful adding to PATH so I just created an alias to bypass this problem
+alias plink=/homes/nber/alextisyoung/plink
 
 
 # >>> conda initialize >>>
