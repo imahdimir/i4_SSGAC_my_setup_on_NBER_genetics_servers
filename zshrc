@@ -1,9 +1,8 @@
 ###########################################################################
 # Policies
 # - I Use BULK=$HOME/bulk Python versions using pyenv
-# - Installed pyenv in $HOME/bulk to save space in the 10GB home folder
+# - Installed pyenv in $HOME/bulk to save space in 10GB home folder
 ###########################################################################
-
 
 mycd()
 {
@@ -15,17 +14,26 @@ mycd()
 }
 alias cd=mycd
 
+# quick way to go to tmp_code_dir that is synced with local code dir to run codes faster
+cdtmp_code_dir() {
+  if [[ -n "$tmp_code_dir" ]]; then
+    cd "$tmp_code_dir" || echo "Failed to cd into \$tmp_code_dir"
+  else
+    echo "tmp_code_dir is not set."
+  fi
+}
+
 
 # source SSGAC bashrc & export variables
 source "/var/genetics/misc/config/.ssgac_bashrc"
 source ".export"
 
 
-alias cdws="cd $WS"
-alias cdp="cd $PROJECTS_DATA"
-
 alias cduws="cd $UKB_WS"
 alias cdup="cd $UKB_PROJECTS_DATA"
+
+alias cdws="cd $WS"
+alias cdp="cd $PROJECTS_DATA"
 
 
 # change default zsh prompt
@@ -39,8 +47,8 @@ eval "$(pyenv virtualenv-init -)" # pyenv-virtualenv
 
 # Add PLINK to PATH
 #export PATH="/homes/nber/alextisyoung/plink:$PATH"
-# Wasn't successful adding to PATH so I just created an alias to bypass this problem
-alias plink=/homes/nber/alextisyoung/plink
+#Wasn't successful adding to PATH so I just created an alias to bypass this problem
+#alias plink=/homes/nber/alextisyoung/plink
 
 
 # >>> conda initialize >>>
@@ -57,9 +65,3 @@ alias plink=/homes/nber/alextisyoung/plink
 #fi
 #unset __conda_setup
 # <<< conda initialize <<<
-
-
-
-# Just to see where I am
-cd
-
