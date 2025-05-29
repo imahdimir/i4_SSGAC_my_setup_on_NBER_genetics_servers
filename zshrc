@@ -15,7 +15,7 @@ mycd()
 alias cd=mycd
 
 # quick way to go to tmp_code_dir that is synced with local code dir to run codes faster
-cdtmp_code_dir() {
+gotmp_code_dir() {
   if [[ -n "$tmp_code_dir" ]]; then
     cd "$tmp_code_dir" || echo "Failed to cd into \$tmp_code_dir"
   else
